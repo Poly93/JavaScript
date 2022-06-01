@@ -10,28 +10,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <a href="./pages/contacto.html"><img class="consultaWp" src="./img/wts.svg" alt="whatsapp"></a>
+    <a href="./pages/contacto.html"><img class="consultaWp animate__flipInY animate__animated" src="./img/wts.svg" alt="whatsapp"></a>
     <header id="top">
         <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
     </header> 
     <nav>
         <ul>
             <!-- <li><img id="IMG1" src="./img/isotipo.png" alt="isotipo"></li> -->
-            <li><a href="./index.html">Nosotros</a></li>
-            <li><a href="./pages/servicios.html">Servicios</a></li>
-            <li><a href="./pages/lubricentro.html">Lubricentro</a></li>
-            <li><a href="./pages/ubicacion.html">Ubicacion</a></li>
-            <li><a href="./pages/contacto.html">Contacto</a></li>
+            <li class="animate__fadeInLeft animate__animated"><a href="./index.html">Nosotros</a></li>
+            <li class="animate__fadeInLeft animate__animated"><a href="./pages/servicios.html">Servicios</a></li>
+            <li class="animate__fadeInLeft animate__animated"><a href="./pages/lubricentro.html">Lubricentro</a></li>
+            <li class="animate__fadeInLeft animate__animated"><a href="./pages/ubicacion.html">Ubicacion</a></li>
+            <li class="animate__fadeInLeft animate__animated"><a href="./pages/contacto.html">Contacto</a></li>
         </ul>         
     </nav>
     <main>
         <section>
-            <img src="./img/frentecompleto.jpg" alt="Frente Completo">
+            <img data-aos="fade-up-left" src="./img/frentecompleto.jpg" alt="Frente Completo">
             <article>
-                <h1>Bienvenido a Lubricentro Stocco</h1>
-                    <p>
+                <h1 class="animate__backInUp animate__animated">Bienvenido a Lubricentro Stocco</h1>
+                    <p class="animate__backInDown animate__animated">
                     Somos una empresa familiar que desde hace más de 40 años se dedica a la atención y al cuidado de tu vehículo.  Contamos con una amplia experiencia y especializacion, nuestra virtud es la confianza y tranquilidad del cliente y eso nos destaca de nuestra competencia. Todos nuestros trabajos y servicios en el automovil "BAJO SU SUPERVISION".
                     Atendemos automóviles nacionales e importados y trabajamos con las principales marcas de lubricantes, filtros y aditivos.
                     Nuestro Lubricentro ubicado en Zona Norte cuenta con una amplia pista de pruebas, herramental para carga de aceite y filtro, sistemas y equipamiento de última tecnología.   
@@ -41,7 +43,7 @@
     </main>
     <footer>
         <p>&#169 2022 Lubricentro Stocco. Todos los derechos reservados.</p>
-        <ul>
+        <ul class="animate__fadeInDown animate__animated">
             <li><a href="./index.html">Nosotros</a></li>
             <li><a href="./pages/servicios.html">Servicios</a></li>
             <li><a href="./pages/lubricentro.html">Lubricentro</a></li>
@@ -50,5 +52,9 @@
             <li><a href="#top">Subir</a></li>
         </ul>
     </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html> 
