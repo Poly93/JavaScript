@@ -3,7 +3,11 @@
     padding: 0;
     scroll-behavior: smooth;
 }
-
+/* MODIFICACIONES BOOTSTRAP */
+.anchoModif-form{
+    width: 30%;
+    margin: 0 auto;
+}
 
 
 body{
@@ -95,7 +99,6 @@ footer ul{
 footer li{
     font-size: 12px;
     border-radius: 2px;
-    margin: 2px;
     padding: 1px;
 }
 
@@ -105,6 +108,7 @@ footer p{
     font-style: italic;
     text-align: center;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 /* BOTON WHATSAPP FIXED */
@@ -143,7 +147,7 @@ footer p{
     grid-area: f1celda1;
 }
 .f1-celda2{
-    background-color: #421312;
+    background-color: #adeb89;
     grid-area: f1celda2;
 }
 .f1-celda3{
@@ -171,9 +175,16 @@ footer p{
 }
 
 .iframe2-responsive{
+    margin-top: 1rem;
     width: 50%;
     height: 360px;
 }
+
+
+
+
+/* SITIO RESPONSIVE */
+
 
 @media screen and (max-width: 420px) {
     .GridServicios{
@@ -200,7 +211,7 @@ footer p{
         background-color:rgb(255, 230, 0)
     }
     .f2-celda2{
-        background-color:rgb(62, 13, 29)
+        background-color:rgb(103, 105, 221)
     }
     .f2-celda3{
         background-color:rgb(197, 77, 141)
@@ -254,6 +265,7 @@ footer p{
         position: relative;
         overflow: hidden;
         padding-top: 56.25%;
+
     }
     .iframe2-responsive{
         position: absolute;
