@@ -3,17 +3,14 @@
     padding: 0;
     scroll-behavior: smooth;
 }
-/* MODIFICACIONES BOOTSTRAP */
-.anchoModif-form{
-    width: 30%;
-    margin: 0 auto;
+
+.linkBanner{
+    grid-area: a;
 }
-
-
 body{
     display: grid;
     grid-template-areas: 
-    "banner" "botonera" "contenido" "piePagina";
+    "a" "banner" "botonera" "contenido" "piePagina";
     font-family: Montserrat;
 }
 
@@ -35,11 +32,14 @@ nav{
 li{
     border-radius: 4px;
     background-color: #f55239;
-    margin: 3px;
-    padding: 3px;
+    margin: 2px;
     list-style-type: none;
     display: inline-block;
     border: 1px solid black;
+}
+
+a:hover{
+    color: black;
 }
 
 
@@ -235,7 +235,7 @@ footer p{
         display: block;
     }
     nav{
-        background-color: white;
+        background-color: #2c3e50;
         justify-content: flex-start;
     }
 
@@ -276,4 +276,20 @@ footer p{
         border: 0;
     }
 
+}
+
+
+/* MODIFICACIONES BOOTSTRAP */
+.anchoModif-form{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.centrado{
+    display: flex;
+    justify-content: center;
+    margin: auto;   
+}
+.margin-card{
+    margin: 10px 10px;
 }
