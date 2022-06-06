@@ -4,12 +4,13 @@
     scroll-behavior: smooth;
 }
 
-
-
+.linkBanner{
+    grid-area: a;
+}
 body{
     display: grid;
     grid-template-areas: 
-    "banner" "botonera" "contenido" "piePagina";
+    "a" "banner" "botonera" "contenido" "piePagina";
     font-family: Montserrat;
 }
 
@@ -31,11 +32,14 @@ nav{
 li{
     border-radius: 4px;
     background-color: #f55239;
-    margin: 3px;
-    padding: 3px;
+    margin: 2px;
     list-style-type: none;
     display: inline-block;
     border: 1px solid black;
+}
+
+a:hover{
+    color: black;
 }
 
 
@@ -95,7 +99,6 @@ footer ul{
 footer li{
     font-size: 12px;
     border-radius: 2px;
-    margin: 2px;
     padding: 1px;
 }
 
@@ -105,6 +108,7 @@ footer p{
     font-style: italic;
     text-align: center;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 /* BOTON WHATSAPP FIXED */
@@ -121,7 +125,7 @@ footer p{
 
 /* MAIN SERVICIOS */
 
-.GridServicios{
+/* .GridServicios{
     display: grid;
     grid-gap: 2px;
     margin: 2px 0 2px 0;
@@ -143,7 +147,7 @@ footer p{
     grid-area: f1celda1;
 }
 .f1-celda2{
-    background-color: #421312;
+    background-color: #adeb89;
     grid-area: f1celda2;
 }
 .f1-celda3{
@@ -163,7 +167,7 @@ footer p{
 .f2-celda3{
     background-color: #7ef539;
     grid-area: f2celda3;
-}
+} */
 
 .iframe-responsive{
     width: 600px;
@@ -171,12 +175,19 @@ footer p{
 }
 
 .iframe2-responsive{
+    margin-top: 1rem;
     width: 50%;
     height: 360px;
 }
 
+
+
+
+/* SITIO RESPONSIVE */
+
+
 @media screen and (max-width: 420px) {
-    .GridServicios{
+    /* .GridServicios{
         display: grid;
         grid-template-columns: repeat(2, 210px);
         grid-template-rows: auto;
@@ -200,11 +211,11 @@ footer p{
         background-color:rgb(255, 230, 0)
     }
     .f2-celda2{
-        background-color:rgb(62, 13, 29)
+        background-color:rgb(103, 105, 221)
     }
     .f2-celda3{
         background-color:rgb(197, 77, 141)
-    }
+    } */
 
     .consultaWp{
         background-color: #25D366;
@@ -224,7 +235,7 @@ footer p{
         display: block;
     }
     nav{
-        background-color: white;
+        background-color: #2c3e50;
         justify-content: flex-start;
     }
 
@@ -254,6 +265,7 @@ footer p{
         position: relative;
         overflow: hidden;
         padding-top: 56.25%;
+
     }
     .iframe2-responsive{
         position: absolute;
@@ -264,4 +276,24 @@ footer p{
         border: 0;
     }
 
+}
+
+
+/* MODIFICACIONES BOOTSTRAP */
+.anchoModif-form{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.centrado{
+    display: flex;
+    justify-content: center;
+    margin: auto;   
+}
+.margin-card{
+    margin: 10px 10px;
+}
+.toggleHorizontal{
+    display: flex;
+    flex-direction: row;
 }
