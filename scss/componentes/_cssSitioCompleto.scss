@@ -71,18 +71,18 @@ h3{
 
 /* PIE DE PAGINA */
 footer ul{
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
     grid-area: piePagina;
-    background-color: #bdc3c7;  
+    // background-color: #bdc3c7;  
     font-size: 13px;
     font-style: italic;
 }
-footer li{
-    font-size: 12px;
-    border-radius: 2px;
-    padding: 1px;
-}
+// footer li{
+    // font-size: 12px;
+    // border-radius: 2px;
+    // padding: 1px;
+// }
 footer p{
     background-color: #bdc3c7;
     font-size: 13px;

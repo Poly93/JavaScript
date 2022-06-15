@@ -15,7 +15,28 @@
         }
     }
     p{
-        font-size: nth($sizes, 1);
+        // font-size: nth($sizes, 1);
         font-weight: 600;
+        @include infoContacto($fszparrafos, $colorCajaInfo)
+        }
+
+    @media screen and (max-width: 420px){
+        .titContacto{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            font-size: nth($sizes, 2);
+        }
+    }    
+    }
+    footer{
+        background-color: map-get($footerContacto, bgcolor);
+        ul{
+            @extend %display;
+        }
+        li{
+            font-size: map-get($footerContacto, fontSize);
+            border-radius: map-get($footerContacto, bordes);
+            padding: map-get($footerContacto, margenInterno);
         }
     }
