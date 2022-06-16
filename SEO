@@ -1,0 +1,42 @@
+# Lubricentro_stocco
+Proyecto CoderHouse
+
+    -MODIFIQUE TABULACION SEGUN LO CONVERSADO.
+
+    -APLICACION DE SEO
+    
+    1) Inserte meta keywords en cada pagina del sitio.
+      <meta name="keywords" content="lubricentro, aceites, fluidos, mecanica, cambio de aceite, filtros, bujias, aceite sintetico, aceite mineral, gasoil, nafta, estacion de servicio, lubricantes, servicios, filtro de aire, aire acondicionado, pintura, reparacion">
+    2) Titulos en todo el sitio.
+      <title>Lubricentro Stocco</title>
+    3) Inserte meta descriptions en todo el sitio.
+      <meta name="description" content="Lubricentro Stocco, con mas de 40 Años de trayectoria en el Rubro, dedicandonos a realizar Service profesional y cuidado a particulares y empresas.">
+    4) INDEX: h1: Bienvenido a Lubricentro Stocco
+       SERVICIOS: h2: Diferentes titulos relacionados la explotacion del comercio.
+       
+    5) ALT Y TITLES:
+        INDEX:
+          -Linea 9 Agregue Type="Image/x-icon"
+          -Linea 25,29 complete los ALT de imagenes.
+          -Carrusel con los ALT.
+          -Linea 103 logo Whatsapp con ALT.
+        SERVICIOS:
+          -Linea 9 Agregue Type="Image/x-icon"
+          -Linea 25,29 complete los ALT de imagenes.
+          -Cada CARD tiene su ALT completo.
+          -Linea 117 logo Whatsapp con ALT.
+        LUBRICENTRO:
+          -Linea 9 Agregue Type="Image/x-icon"
+          -Linea 25,29 complete los ALT de imagenes.
+          -Linea 55, 58 Complete el ALT de la imagen.
+          -Linea 72 logo Whatsapp con ALT.  
+        UBICACION:
+          -Linea 9 Agregue Type="Image/x-icon"
+          -Linea 25,29 complete los ALT de imagenes.
+          -Linea 58 Complete ALT del mapa de ubicacion.
+          -Linea 73 logo Whatsapp con ALT.  
+        CONTACTO:
+          -Linea 9 Agregue Type="Image/x-icon"
+          -Linea 27,31 complete los ALT de imagenes.
+          -Linea 72 Agregue Title Publicidad.
+          -Linea 87 logo Whatsapp con ALT.     
