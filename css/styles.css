@@ -167,7 +167,7 @@ footer p {
     text-decoration: none;
     margin: 30px auto;
     padding: 10px;
-    width: 20%;
+    width: 400px;
     background-color: rgba(0, 0, 0, 0.041);
     border-radius: 10px;
     font-style: italic;
@@ -191,6 +191,23 @@ footer {
   footer li {
     font-size: 12px;
     border-radius: 2px; }
+
+.anchoCajaIndex {
+  width: 60%;
+  margin: auto; }
+
+.h2Servicios {
+  text-decoration: none;
+  font-size: 150%;
+  font-weight: 500; }
+
+.card-color {
+  height: 360px;
+  transition: all 2s;
+  overflow: hidden; }
+  .card-color:hover {
+    background-color: #ffffff60;
+    height: 570px; }
 
 footer ul {
   display: flex;

@@ -1,0 +1,15 @@
+.h2Servicios{
+    text-decoration: none;
+    font-size: 150%;
+    font-weight: 500;
+}
+.card-color{
+    height: 360px;
+    transition: all 2s;
+    overflow: hidden;
+    &:hover{    
+        background-color: #ffffff60;
+        height: 570px;
+
+    }
+}
