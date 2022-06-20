@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; }
+
+body {
+    display: grid;
+    grid-template-areas: "banner" "botonera" "contenido" "piePagina" "a";
+    font-family: Montserrat;
+    
+    .linkBanner {
+    grid-area: a; }
+    
+    header {
+    grid-area: banner;
+    justify-self: center; }
+    
+    nav {
+    display: flex;
+    justify-content: center;
+    grid-area: botonera;
+    background-color: nth($coloresSitio, 1);
+    .toggleHorizontal {
+        display: flex;
+        flex-direction: row; }
+    }
+    
+    main {
+        background: nth($coloresSitio, 4);
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, nth($coloresSitio, 1) , nth($coloresSitio, 4));
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, nth($coloresSitio, 1) , nth($coloresSitio, 4));
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        grid-area: contenido;
+        text-align: center; }
+}
+
+a {
+    color: black;
+    text-decoration: none; 
+    &:hover{
+        color: white;
+    }
+}
+
+h1{
+    @include h($margenH, $tDecoH)
+}
+h2{
+    @include h($margenH, $tDecoH)
+}
+h3{
+    @include h($margenH, $tDecoH)
+}
+
+footer{
+    background-color: map-get($footer, bgcolor);
+    p{
+        background-color: nth($coloresSitio, 4);
+        font-size: map-get($footer, fontSize);
+        font-style: $fuenteContacto;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    ul{
+        @extend %display;
+    }
+    li{
+        font-size: map-get($footer, fontSize);
+        border-radius: map-get($footer, bordes);
+        padding: map-get($footer, margenInterno);
+    }
+}
+
+li {
+    border-radius: 4px;
+    background-color: nth($coloresSitio, 3);
+    margin: 2px;
+    list-style-type: none;
+    display: inline-block;
+    border: 1px solid black;
+    // @include bordesList($gBorde, $cBorde, $tBorde); NO FUNCIONA
+    &:hover{
+        background-color: nth($coloresSitio, 5);
+    }
+}
+
+.consultaWp {
+    background-color: #25D366;
+    border-radius: 9px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem; 
+
+        @media screen and (max-width: 420px) {
+        background-color: #25D366;
+        border-radius: 4px;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem; 
+    }
+}
+
+@media screen and (max-width: 420px){
+    header img {
+        max-width: 420px; }
+    main img {
+        max-height: 300px;
+        max-width: 420px; }
+}

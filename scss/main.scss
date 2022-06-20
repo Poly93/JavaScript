@@ -1,12 +1,14 @@
-@import"./base/mixin";
 @import"./base/variables";
 @import"./base/listas";
+@import"./base/mixin";
 @import"./base/maps";
-@import"./componentes/cssSitioCompleto";
 @import"./componentes/index";
 @import"./componentes/servicios";
 @import"./componentes/lubricentro";
 @import"./componentes/ubicacion";
 @import"./componentes/contacto";
-@import"./componentes/general";
+@import"./componentes/seccionesGenerales";
 @import"./base/extends";
+
+
+

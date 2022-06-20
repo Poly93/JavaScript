@@ -2,3 +2,15 @@
     background-color: $colorCajaInfo;
     font-size: $fszparrafos;
 }
+
+/* MARGENES DE LOS H */
+@mixin h ($margenH, $tDecoH){
+    margin: $margenH;
+    text-decoration: $tDecoH;
+}
+
+/* BORDES LIST */
+@mixin bordesList ($gBorde, $cBorde, $tBorde){
+    border: $gBorde, $tBorde, $cBorde;
+}
+    
