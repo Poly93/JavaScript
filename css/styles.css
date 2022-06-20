@@ -161,6 +161,23 @@ footer p {
   width: 50%;
   margin-left: 25%; }
 
+.anchoCajaIndex {
+  width: 60%;
+  margin: auto; }
+
+.h2Servicios {
+  text-decoration: none;
+  font-size: 150%;
+  font-weight: 500; }
+
+.card-color {
+  height: 360px;
+  transition: all 2s;
+  overflow: hidden; }
+  .card-color:hover {
+    background-color: #ffffff60;
+    height: 570px; }
+
 .sectionContacto {
   background-color: #bdc3c7; }
   .sectionContacto .titContacto {
@@ -192,22 +209,10 @@ footer {
     font-size: 12px;
     border-radius: 2px; }
 
-.anchoCajaIndex {
-  width: 60%;
-  margin: auto; }
-
-.h2Servicios {
-  text-decoration: none;
-  font-size: 150%;
-  font-weight: 500; }
-
-.card-color {
-  height: 360px;
-  transition: all 2s;
-  overflow: hidden; }
-  .card-color:hover {
-    background-color: #ffffff60;
-    height: 570px; }
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; }
 
 footer ul {
   display: flex;
