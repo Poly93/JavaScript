@@ -35,15 +35,38 @@
 .margin-card {
   margin: 10px 10px; }
 
-#Merca__lubricentro {
-  width: 1057px; }
-
 .grilla__lubricentro {
-  margin: auto;
-  display: flex; }
+  margin: 50px auto;
+  padding: 40px 0;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 3fr auto;
+  gap: 30px; }
+  @media screen and (max-width: 420px) {
+    .grilla__lubricentro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px; }
+      .grilla__lubricentro .grilla__brands {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px; } }
+
+.grilla__brands {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; }
+
+.card__brand {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: auto;
+  border-radius: 30px;
+  background-color: #2c3e5050; }
 
 .iframe-responsive {
-  margin: 50px;
   width: 600px;
   height: 460px; }
   @media screen and (max-width: 420px) {
@@ -57,6 +80,8 @@
 
 @media screen and (max-width: 420px) {
   .mapa-responsive {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     position: relative;
     overflow: hidden;
     padding-top: 56.25%; } }
@@ -204,8 +229,7 @@ li {
 @media screen and (max-width: 420px) {
   header img {
     max-width: 420px; }
-  main img {
-    max-height: 300px;
+  main {
     max-width: 420px; } }
 
 footer ul {
