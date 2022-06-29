@@ -48,6 +48,7 @@ h1{
     @include h($margenH, $tDecoH)
 }
 h2{
+    font-size: 2.5em;
     @include h($margenH, $tDecoH)
 }
 h3{
