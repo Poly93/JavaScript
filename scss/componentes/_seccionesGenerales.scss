@@ -13,7 +13,8 @@ body {
     
     header {
     grid-area: banner;
-    justify-self: center; }
+    justify-self: center; 
+    }
     
     nav {
     display: flex;
@@ -22,7 +23,9 @@ body {
     background-color: nth($coloresSitio, 1);
     .toggleHorizontal {
         display: flex;
-        flex-direction: row; }
+        flex-direction: row;
+        font-size: 0.8em;
+    }
     }
     
     main {
@@ -66,6 +69,7 @@ footer{
         margin-bottom: 0;
     }
     ul{
+        padding-left: 0;
         @extend %display;
     }
     li{
@@ -85,26 +89,6 @@ li {
     // @include bordesList($gBorde, $cBorde, $tBorde); NO FUNCIONA
     &:hover{
         background-color: nth($coloresSitio, 5);
-    }
-}
-
-.consultaWp {
-    background-color: #25D366;
-    border-radius: 9px;
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem; 
-
-        @media screen and (max-width: 420px) {
-        background-color: #25D366;
-        border-radius: 4px;
-        width: 30px;
-        height: 30px;
-        position: fixed;
-        bottom: 1rem;
-        right: 1rem; 
     }
 }
 
