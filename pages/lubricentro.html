@@ -28,7 +28,7 @@
       <div class="container-fluid">
         <a class="botonInicio" href="../index.html"><img src="../img/isotipo.png" alt="Isotipo Lubricentro Stocco"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav toggleHorizontal">
@@ -53,11 +53,22 @@
     </nav> 
     <main>
         <h2 class="animate__backInUp animate__animated">Nuestros Productos</h2>
+            <div>
+              <p>
+                <a class="btn btn-primary btnPosition" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  CARRITO <span id="precioTotal"></span>
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div id="carrito" class="card card-body cardModif1">
+                </div>
+              </div>
+            </div>
         <div class="grilla__lubricentro">
-          <div data-aos="zoom-out-up" data-aos-duration="3000" class="grilla__brands">
-            <div class="card__brand"><img src="../img/productos/3m.png" alt="LOGO 3M"></div>
-            <div class="card__brand"><img src="../img/productos/bardahl.png" alt="LOGO BARDAHL"> </div>
-            <div class="card__brand"><img src="../img/productos/bosch.png" alt="LOGO BOSCH"></div>
+          <div id="catalogo" data-aos="zoom-out-up" data-aos-duration="3000" class="grilla__brands">
+            <div class="card__brand"><img src="../img/productos/3m.png" alt="LOGO 3M">$ 3000<button id= "btn-catalogo" class="btn btn-success btnPosition">AGREGAR</button></div>
+            <div class="card__brand"><img src="../img/productos/bardahl.png" alt="LOGO BARDAHL">$ 4000<button id= "btn-catalogo" class="btn btn-success btnPosition">AGREGAR</button></div>
+            <div class="card__brand"><img src="../img/productos/bosch.png" alt="LOGO BOSCH">$ 5000<button id= "btn-catalogo" class="btn btn-success btnPosition">AGREGAR</button></div>
             <div class="card__brand"><img src="../img/productos/castrol.png" alt=""></div>
             <div class="card__brand"><img src="../img/productos/elf.png" alt="LOGO ELF"></div>
             <div class="card__brand"><img src="../img/productos/gulf.png" alt="LOGO GULF"></div>
@@ -94,5 +105,6 @@
     <script>
       AOS.init();
     </script> 
+    <script src="../tienda.js"></script>
 </body>
 </html>

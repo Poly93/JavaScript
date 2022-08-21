@@ -36,3 +36,21 @@
     background-color: nth($coloresSitio, 2);
 }
 
+.btnPosition{
+    margin-top: 2rem;
+}
+
+.cardModif1{
+    flex-direction: row;
+    gap: 30px;
+    background-color: #2c3e5050;
+    max-width: fit-content;
+    margin: auto;
+}
+
+#catalogo{
+    font-size: 2rem;
+}
+#carrito{
+    font-size: 2rem;
+}
