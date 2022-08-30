@@ -95,8 +95,13 @@ const productos = [
 let contadorCarrito = 0;
 let carrito = [];
 
-// if(localStorage.getItem('carrito')){ carrito = localStorage.getItem('carrito')
-// } else{ carrito = []}
+let carritoLS = (clave, valor) => {localStorage.setItem(clave, valor)}
+
+if (localStorage.getItem('carrito')) {
+    carritoLS('carrito', JSON.stringify(carrito))
+} else {
+    carrito = []
+};
 
 const productoCatalogoHTML = (producto) => {
     return `
@@ -161,20 +166,19 @@ const botonesCatalogo = () => {
                 img: producto.img,
                 quantity: 1
             };
-
             // Check if item is in cart
             const indexProductCart = carrito.findIndex((elem) => elem.id === producto.id)
             if(indexProductCart >= 0) { // si existe
                 const newCart = [...carrito]
                 newCart[indexProductCart].quantity += 1
                 carrito = newCart
-                // localStorage.setItem('carrito', JSON.stringify(carrito))
+                localStorage.setItem('carrito', JSON.stringify(carrito))
             } else { // si no existe
                 carrito.push(productoCarrito);
-                // localStorage.setItem('carrito', JSON.stringify(carrito))
+                localStorage.setItem('carrito', JSON.stringify(carrito))
             }
             mostrarCarrito();
-            checkCounterCart()
+            checkCounterCart();
         });
     };
 };
@@ -204,7 +208,7 @@ const botonesCarrito = () => {
             const newCart = [...carrito]
             newCart[indexProductCart].quantity += 1
             carrito = newCart
-            // localStorage.setItem('carrito', JSON.stringify(carrito))
+            localStorage.setItem('carrito', JSON.stringify(carrito))
             mostrarCarrito();
             checkCounterCart()
         })
@@ -215,11 +219,11 @@ const botonesCarrito = () => {
             if(newCart[indexProductCart].quantity > 1){
                 newCart[indexProductCart].quantity -= 1
                 carrito = newCart
-                // localStorage.setItem('carrito', JSON.stringify(carrito))
+                localStorage.setItem('carrito', JSON.stringify(carrito))
             } else {
                 const newCart = carrito.filter((elem) => elem.id !== producto.id)
                 carrito = newCart
-                // localStorage.setItem('carrito', JSON.stringify(carrito))
+                localStorage.setItem('carrito', JSON.stringify(carrito))
             }
             
             mostrarCarrito();
@@ -229,7 +233,7 @@ const botonesCarrito = () => {
         botonNodo.addEventListener("click" , () => {
             const index = carrito.findIndex((p) => p.id == producto.id);
             carrito.splice(index, 1);
-            // localStorage.setItem('carrito', JSON.stringify(carrito))
+            localStorage.setItem('carrito', JSON.stringify(carrito))
             mostrarCarrito();
             checkCounterCart()
         });
