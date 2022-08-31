@@ -177,6 +177,16 @@ const botonesCatalogo = () => {
                 carrito.push(productoCarrito);
                 localStorage.setItem('carrito', JSON.stringify(carrito))
             }
+            // libreria de alertas
+            Toastify({
+                text: "Producto Agregado",
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {background: "linear-gradient(to right, #2c3e50, #f55239)"},
+                onClick: function(){} // Callback after click
+            }).showToast();
             mostrarCarrito();
             checkCounterCart();
         });
@@ -225,7 +235,6 @@ const botonesCarrito = () => {
                 carrito = newCart
                 localStorage.setItem('carrito', JSON.stringify(carrito))
             }
-            
             mostrarCarrito();
             checkCounterCart()
         })
@@ -234,6 +243,17 @@ const botonesCarrito = () => {
             const index = carrito.findIndex((p) => p.id == producto.id);
             carrito.splice(index, 1);
             localStorage.setItem('carrito', JSON.stringify(carrito))
+            // libreria de alertas
+            Toastify({
+                text: "Producto Eliminado",
+                duration: 3000,
+                newWindow: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {background: "linear-gradient(to left, #bdc3c7, #f55239)"},
+                onClick: function(){} // Callback after click
+            }).showToast();
             mostrarCarrito();
             checkCounterCart()
         });
