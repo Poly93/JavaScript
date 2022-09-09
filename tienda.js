@@ -1,107 +1,9 @@
-const productos = [
-    {
-        id: 1,
-        nombre: "3m",
-        precio: 3000,
-        img:"../img/productos/3m.png"
-    },{
-        id: 2,
-        nombre: "bardahl",
-        precio: 4000,
-        img:"../img/productos/bardahl.png"
-    },{
-        id: 3,
-        nombre: "bosch",
-        precio: 5000,
-        img:"../img/productos/bosch.png"
-    },{
-        id: 4,
-        nombre: "motul",
-        precio: 800,
-        img:"../img/productos/motul.png"
-    },{
-        id: 5,
-        nombre: "castrol",
-        precio: 9400,
-        img:"../img/productos/castrol.png"
-    },{
-        id: 6,
-        nombre: "elf",
-        precio: 3200,
-        img:"../img/productos/elf.png"
-    },{
-        id: 7,
-        nombre: "gulf",
-        precio: 1000,
-        img:"../img/productos/gulf.png"
-    },{
-        id: 8,
-        nombre: "ipone",
-        precio: 6700,
-        img:"../img/productos/ipone.png"
-    },{
-        id: 9,
-        nombre: "liquimoly",
-        precio: 200,
-        img:"../img/productos/liquimoly.png"
-    },{
-        id: 10,
-        nombre: "mobil",
-        precio: 3500,
-        img:"../img/productos/mobil.png"
-    },{
-        id: 11,
-        nombre: "petronas",
-        precio: 1100,
-        img:"../img/productos/petronas.png"
-    },{
-        id: 12,
-        nombre: "pirelli",
-        precio: 2800,
-        img:"../img/productos/pirelli.png"
-    },{
-        id: 13,
-        nombre: "shell",
-        precio: 4300,
-        img:"../img/productos/shell.png"
-    },{
-        id: 14,
-        nombre: "total",
-        precio: 500,
-        img:"../img/productos/total.png"
-    },{
-        id: 15,
-        nombre: "valvoline",
-        precio: 700,
-        img:"../img/productos/valvoline.png"
-    },{
-        id: 16,
-        nombre: "wagner",
-        precio: 9700,
-        img:"../img/productos/wagner.png"
-    },{
-        id: 17,
-        nombre: "wynns",
-        precio: 3400,
-        img:"../img/productos/wynns.png"
-    },{
-        id: 18,
-        nombre: "ypf",
-        precio: 1500,
-        img:"../img/productos/ypf.png"
-    },
-];
 
 let contadorCarrito = 0;
 let carrito = [];
+let productos = []
+let localStorageCart = localStorage.getItem('carrito')
 
-let carritoLS = (clave, valor) => {localStorage.setItem(clave, valor)}
-
-if (localStorage.getItem('carrito')) {
-    carritoLS('carrito', JSON.stringify(carrito))
-} else {
-    carrito = []
-};
 
 const productoCatalogoHTML = (producto) => {
     return `
@@ -127,11 +29,19 @@ const productoCarritoHTML = (producto) => {
     </div>`;
 };
 
-
-const mostrarCatalogo = () => {
+const renderCatalog = async () => {
     const catalogoNodo = document.getElementById("catalogo");
     let catalogoHTML = "";
 
+    // Llamar a los archivos desde un json mediante un fetch
+    await fetch('../data/productos.json').then( async(res) => {
+        // Esperar a que la promesa de la respuesta finalice
+        const data = await res.json()
+        productos = data
+        
+    }).catch((err) => {
+        console.error(err)
+    })
     for(const producto of productos) {
         catalogoHTML += productoCatalogoHTML(producto);
     };
@@ -140,7 +50,7 @@ const mostrarCatalogo = () => {
     checkCounterCart()
 };
 
-const mostrarCarrito = () => {
+const renderCart = () => {
     const carritoNodo = document.getElementById("carrito");
     const precioNodo = document.getElementById("precioTotal");
     let carritoHTML = "";
@@ -187,7 +97,7 @@ const botonesCatalogo = () => {
                 style: {background: "linear-gradient(to right, #2c3e50, #f55239)"},
                 onClick: function(){} // Callback after click
             }).showToast();
-            mostrarCarrito();
+            renderCart();
             checkCounterCart();
         });
     };
@@ -219,7 +129,7 @@ const botonesCarrito = () => {
             newCart[indexProductCart].quantity += 1
             carrito = newCart
             localStorage.setItem('carrito', JSON.stringify(carrito))
-            mostrarCarrito();
+            renderCart();
             checkCounterCart()
         })
         // Evento quitar cantidad
@@ -235,7 +145,7 @@ const botonesCarrito = () => {
                 carrito = newCart
                 localStorage.setItem('carrito', JSON.stringify(carrito))
             }
-            mostrarCarrito();
+            renderCart();
             checkCounterCart()
         })
         // Evento remover
@@ -254,10 +164,21 @@ const botonesCarrito = () => {
                 style: {background: "linear-gradient(to left, #bdc3c7, #f55239)"},
                 onClick: function(){} // Callback after click
             }).showToast();
-            mostrarCarrito();
+            renderCart();
             checkCounterCart()
         });
     };
 };
 
-mostrarCatalogo();
+renderCatalog();
+
+if(localStorageCart) {
+    carrito = JSON.parse(localStorageCart)
+    renderCart()  
+    checkCounterCart()
+}
+
+
+
+
+
