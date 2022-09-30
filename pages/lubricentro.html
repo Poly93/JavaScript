@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
     <meta name="keywords" content="lubricentro, aceites, fluidos, mecanica, cambio de aceite, filtros, bujias, aceite sintetico, aceite mineral, gasoil, nafta, estacion de servicio, lubricantes, servicios, filtro de aire, aire acondicionado, pintura, reparacion">
     <meta name="description" content="Lubricentro Stocco, con mas de 40 Años de trayectoria en el Rubro, dedicandonos a realizar Service profesional y cuidado a particulares y empresas.">
     <link rel="shortcut icon" href="../img/shortcut_oil.png" type="image/x-icon">
@@ -18,6 +18,8 @@
     <!-- PAGINAS DE ANIMACIONES PREDEFINIDAS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Nuestros Productos - Lubricentro Stocco</title>
 </head>
 <body>
@@ -56,34 +58,17 @@
             <div>
               <p>
                 <a class="btn btn-primary btnPosition" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                  CARRITO <span id="precioTotal"></span>
+                  CARRITO $<span id="precioTotal"></span>
                 </a>
               </p>
               <div class="collapse" id="collapseExample">
+                <p id="total-count"></p>
                 <div id="carrito" class="card card-body cardModif1">
                 </div>
               </div>
             </div>
         <div class="grilla__lubricentro">
           <div id="catalogo" data-aos="zoom-out-up" data-aos-duration="3000" class="grilla__brands">
-            <div class="card__brand"><img src="../img/productos/3m.png" alt="LOGO 3M">$ 3000<button id= "btn-catalogo" class="btn btn-success btnPosition">AGREGAR</button></div>
-            <div class="card__brand"><img src="../img/productos/bardahl.png" alt="LOGO BARDAHL">$ 4000<button id= "btn-catalogo" class="btn btn-success btnPosition">AGREGAR</button></div>
-            <div class="card__brand"><img src="../img/productos/bosch.png" alt="LOGO BOSCH">$ 5000<button id= "btn-catalogo" class="btn btn-success btnPosition">AGREGAR</button></div>
-            <div class="card__brand"><img src="../img/productos/castrol.png" alt=""></div>
-            <div class="card__brand"><img src="../img/productos/elf.png" alt="LOGO ELF"></div>
-            <div class="card__brand"><img src="../img/productos/gulf.png" alt="LOGO GULF"></div>
-            <div class="card__brand"><img src="../img/productos/ipone.png" alt="LOGO IPONE"></div>
-            <div class="card__brand"><img src="../img/productos/liquimoly.png" alt="LOGO LIQUI MOLY"></div>
-            <div class="card__brand"><img src="../img/productos/mobil.png" alt="LOGO MOBIL"></div>
-            <div class="card__brand"><img src="../img/productos/motul.png" alt="LOGO MOTUL"></div>
-            <div class="card__brand"><img src="../img/productos/petronas.png" alt="LOGO PETRONAS"></div>
-            <div class="card__brand"><img src="../img/productos/pirelli.png" alt="LOGO PIRELLI"></div>
-            <div class="card__brand"><img src="../img/productos/shell.png" alt="LOGO SHELL"></div>
-            <div class="card__brand"><img src="../img/productos/total.png" alt="LOGO TOTAL QUARTZ"></div>
-            <div class="card__brand"><img src="../img/productos/valvoline.png" alt="LOGO VALVOLINE"></div>
-            <div class="card__brand"><img src="../img/productos/wagner.png" alt="LOGO WAGNER LOCKHEED"></div>
-            <div class="card__brand"><img src="../img/productos/wynns.png" alt="LOGO WYNNS"></div>
-            <div class="card__brand"><img src="../img/productos/ypf.png" alt="LOGO YPF"></div>
           </div>
         </div>
     </main>
@@ -98,12 +83,12 @@
           <li><a href="#top">Subir</a></li>
         </ul>
     </footer>
+    <a class="linkBanner" href="https://wa.me/+5491161476728?text=Bienvenidos%20a%20Lubricentro%20Stocco.%20Esperamos%20su%20consulta" target="_blank"><img class="consultaWp animate__flipInY animate__animated" src="../img/wts.svg" alt="Logo whatsapp"></a>
           <!-- SCRIPTS DE ANIMACIONES Y BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>                        
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script> 
+    <script>AOS.init();</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> 
     <script src="../tienda.js"></script>
 </body>
 </html>

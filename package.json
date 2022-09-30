@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@emailjs/browser": "^3.7.0",
     "abbrev": "^1.1.1",
     "agent-base": "^6.0.2",
     "agentkeepalive": "^4.2.1",
@@ -22,6 +23,7 @@
     "asynckit": "^0.4.0",
     "aws-sign2": "^0.7.0",
     "aws4": "^1.11.0",
+    "axios": "^0.27.2",
     "balanced-match": "^1.0.2",
     "bcrypt-pbkdf": "^1.0.2",
     "binary-extensions": "^2.2.0",
@@ -178,6 +180,8 @@
     "nan": "^2.16.0",
     "negotiator": "^0.6.3",
     "node-gyp": "^8.4.1",
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16",
     "nopt": "^5.0.0",
     "normalize-package-data": "^3.0.3",
     "normalize-path": "^3.0.0",
@@ -285,10 +289,6 @@
     "yallist": "^4.0.0",
     "yargs": "^17.5.1",
     "yargs-parser": "^20.2.9"
-  },
-  "devDependencies": {
-    "node-sass": "^7.0.1",
-    "nodemon": "^2.0.16"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

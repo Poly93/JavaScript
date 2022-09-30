@@ -1,4 +1,6 @@
-.titContacto{
+.sectionContacto{
+    background-color: nth($coloresSitio, 4);
+    .titContacto{
         text-decoration: none;
         margin: 30px auto;
         padding: 10px;
@@ -9,7 +11,7 @@
         font-size: $fszContacto;
         &:hover{
             background-color: nth($coloresSitio, 2);
-            cursor: pointer;
+            text-decoration:underline;
         }
         @media screen and (max-width: 420px){
             width: 100%;
@@ -17,9 +19,10 @@
             margin: auto;
             font-size: nth($sizes, 2);
     }
+}
     p{
         font-weight: 600;
-        @include infoContacto($fszparrafos, none)
+        @include infoContacto($fszparrafos, $colorCajaInfo)
         }
     }
 
@@ -49,10 +52,5 @@
     margin: 0 auto; 
 }
 
-.formColor-modif{
-    background-color: #ffffff40;
-    border: 1px #ffffff50 solid;
-    transition: border-color 6s ease-in-out,box-shadow 1s ease-in-out;
-}
 
 
