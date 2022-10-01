@@ -155,7 +155,6 @@
       font-size: 2rem; } }
 
 p {
-  font-weight: 600;
   background-color: none;
   font-size: 1rem; }
 
@@ -208,7 +207,8 @@ body {
     background-color: #2c3e50; }
     body nav .toggleHorizontal {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      font-size: 0.8em; }
   body main {
     background: #bdc3c7;
     /* fallback for old browsers */
@@ -226,16 +226,17 @@ a {
     color: white; }
 
 h1 {
-  margin: 5px 5px 5px 5px;
-  text-decoration: underline; }
+  margin: 5px 5px 25px 5px;
+  text-decoration: none; }
 
 h2 {
-  margin: 5px 5px 5px 5px;
-  text-decoration: underline; }
+  font-size: 2.5em;
+  margin: 5px 5px 25px 5px;
+  text-decoration: none; }
 
 h3 {
-  margin: 5px 5px 5px 5px;
-  text-decoration: underline; }
+  margin: 5px 5px 25px 5px;
+  text-decoration: none; }
 
 footer {
   background-color: #bdc3c7; }

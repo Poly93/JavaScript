@@ -22,8 +22,10 @@ body {
     background-color: nth($coloresSitio, 1);
     .toggleHorizontal {
         display: flex;
-        flex-direction: row; }
+        flex-direction: row;
+        font-size: 0.8em;
     }
+}
     
     main {
         background: nth($coloresSitio, 4);
@@ -48,6 +50,7 @@ h1{
     @include h($margenH, $tDecoH)
 }
 h2{
+    font-size: 2.5em;
     @include h($margenH, $tDecoH)
 }
 h3{
